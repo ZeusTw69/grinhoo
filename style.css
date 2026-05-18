@@ -1,0 +1,254 @@
+/* Configurações Globais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --primary-color: #2E7D32; /* Verde Agro */
+    --secondary-color: #81C784;
+    --dark-color: #1b1b1b;
+    --light-color: #f4f7f6;
+    --text-color: #333;
+}
+
+body {
+    color: var(--text-color);
+    background-color: #fff;
+    overflow-x: hidden;
+}
+
+h1, h2, h3 {
+    color: var(--primary-color);
+}
+
+.text-center { text-align: center; }
+.section-padding { padding: 80px 20px; }
+.container { max-width: 1200px; margin: 0 auto; }
+.bg-light { background-color: var(--light-color); }
+.bg-dark { background-color: var(--dark-color); }
+.bg-dark h2 { color: var(--secondary-color); }
+
+/* Header & Navbar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background: rgba(0, 0, 0, 0.6);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    transition: background 0.3s;
+}
+
+nav .logo {
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--secondary-color);
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1920&q=80') center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+}
+
+.hero-content h1 {
+    font-size: 4rem;
+    color: #fff;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: var(--primary-color);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: transform 0.3s, background 0.3s;
+}
+
+.btn:hover {
+    background-color: #1b5e20;
+    transform: translateY(-3px);
+}
+
+/* Seção Sobre */
+.split-content {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.text-box { flex: 1; font-size: 1.1rem; line-height: 1.6; }
+.text-box p { margin-bottom: 20px; }
+.image-box { flex: 1; }
+.image-box img {
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    transition: transform 0.5s;
+}
+.image-box img:hover { transform: scale(1.03); }
+
+/* Cards Pilares */
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.card {
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.card:hover { transform: translateY(-10px); }
+.card img { width: 100%; height: 200px; object-fit: cover; }
+.card h3 { margin: 20px 0 10px; }
+.card p { padding: 0 20px 30px; font-size: 0.95rem; color: #555; }
+
+/* Benefícios (Contadores) */
+.stats-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.stat-item {
+    text-align: center;
+    margin: 20px;
+}
+
+.stat-item h3 {
+    font-size: 3.5rem;
+    display: inline;
+    color: var(--primary-color);
+}
+.stat-item span { font-size: 2rem; font-weight: bold; color: var(--primary-color); }
+.stat-item p { font-weight: 600; margin-top: 10px; color: #666; max-width: 200px; }
+
+/* Galeria */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.gallery-item {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s;
+}
+
+.gallery-item .overlay {
+    position: absolute;
+    bottom: -100%;
+    left: 0;
+    width: 100%;
+    background: rgba(46, 125, 50, 0.9);
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    transition: bottom 0.3s ease-in-out;
+    font-weight: bold;
+}
+
+.gallery-item:hover img { transform: scale(1.1); }
+.gallery-item:hover .overlay { bottom: 0; }
+
+/* Footer */
+footer {
+    background: #111;
+    color: #888;
+    padding: 30px 0;
+}
+
+/* Animações CSS (Gatilho no JS) */
+.animate-up {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 1s forwards;
+}
+
+.hidden {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.delay-1 { animation-delay: 0.3s; transition-delay: 0.2s; }
+.delay-2 { animation-delay: 0.6s; transition-delay: 0.4s; }
+.delay-3 { animation-delay: 0.9s; transition-delay: 0.6s; }
+
+@keyframes fadeInUp {
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsividade */
+@media(max-width: 768px) {
+    .split-content { flex-direction: column; }
+    .hero-content h1 { font-size: 2.5rem; }
+    nav { flex-direction: column; padding: 15px; }
+    .nav-links { margin-top: 15px; }
+}
