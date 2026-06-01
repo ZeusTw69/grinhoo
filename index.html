@@ -1,118 +1,272 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+    <!--
+    =====================================================
+    PROJETO: AgroSustentável - Sistema ILPF
+    =====================================================
+    Objetivo:
+    Apresentar informações sobre o sistema de Integração
+    Lavoura-Pecuária-Floresta (ILPF), destacando seus
+    pilares, benefícios e práticas sustentáveis.
+
+    Tecnologias utilizadas:
+    - HTML5
+    - CSS3 (style.css)
+    - JavaScript (script.js)
+    - Google Fonts (Poppins)
+    =====================================================
+    -->
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Título exibido na aba do navegador -->
     <title>Sustentabilidade Agro: O Sistema ILPF</title>
+
+    <!-- Arquivo de estilos da página -->
     <link rel="stylesheet" href="style.css">
+
+    <!-- Fonte Poppins importada do Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
+    <!--
+    =====================================================
+    HEADER / HERO SECTION
+    =====================================================
+    Seção principal da página contendo:
+    - Logo do projeto
+    - Menu de navegação
+    - Título principal
+    - Texto introdutório
+    - Botão para navegação interna
+    =====================================================
+    -->
     <header class="hero">
+
+        <!-- Barra de navegação -->
         <nav>
+
+            <!-- Nome da marca -->
             <div class="logo">AgroSustentável</div>
+
+            <!-- Menu de navegação entre as seções -->
             <ul class="nav-links">
                 <li><a href="#sobre">Sobre o ILPF</a></li>
                 <li><a href="#pilares">Os 3 Pilares</a></li>
                 <li><a href="#beneficios">Benefícios</a></li>
                 <li><a href="#galeria">Galeria</a></li>
             </ul>
+
         </nav>
+
+        <!-- Conteúdo principal do banner -->
         <div class="hero-content">
-            <h1 class="animate-up">Agro Forte, Futuro Sustentável</h1>
-            <p class="animate-up delay-1">O equilíbrio perfeito entre alta produção e conservação ambiental através da Integração Lavoura-Pecuária-Floresta (ILPF).</p>
-            <a href="#sobre" class="btn animate-up delay-2">Descubra Como Funciona</a>
+
+            <!-- Título de destaque -->
+            <h1 class="animate-up">
+                Agro Forte, Futuro Sustentável
+            </h1>
+
+            <!-- Texto explicativo -->
+            <p class="animate-up delay-1">
+                O equilíbrio perfeito entre alta produção e conservação ambiental através da Integração Lavoura-Pecuária-Floresta (ILPF).
+            </p>
+
+            <!-- Botão que direciona para a seção Sobre -->
+            <a href="#sobre" class="btn animate-up delay-2">
+                Descubra Como Funciona
+            </a>
+
         </div>
     </header>
 
+    <!--
+    =====================================================
+    SEÇÃO SOBRE O ILPF
+    =====================================================
+    Explica o conceito da Integração
+    Lavoura-Pecuária-Floresta e seus objetivos.
+    =====================================================
+    -->
     <section id="sobre" class="section-padding hidden">
+
         <div class="container">
+
             <div class="text-center">
                 <h2>O que é o Sistema ILPF?</h2>
-                <p class="subtitle">Uma revolução verde nos campos do Brasil e do mundo.</p>
+
+                <p class="subtitle">
+                    Uma revolução verde nos campos do Brasil e do mundo.
+                </p>
             </div>
+
             <div class="split-content">
+
+                <!-- Texto explicativo -->
                 <div class="text-box">
-                    <p>A <strong>Integração Lavoura-Pecuária-Floresta (ILPF)</strong> é uma estratégia de produção que integra diferentes sistemas produtivos, agrícolas, pecuários e florestais, dentro de uma mesma área.</p>
-                    <p>O objetivo é otimizar o uso da terra, elevando os patamares de produtividade, diversificando a produção e gerando produtos de qualidade. Com isso, reduzimos a pressão sobre áreas de vegetação nativa, recuperamos pastagens degradadas e sequestramos toneladas de carbono da atmosfera.</p>
+
+                    <p>
+                        A <strong>Integração Lavoura-Pecuária-Floresta (ILPF)</strong>
+                        é uma estratégia de produção que integra sistemas
+                        agrícolas, pecuários e florestais em uma mesma área.
+                    </p>
+
+                    <p>
+                        O objetivo é aumentar a produtividade, recuperar áreas
+                        degradadas e reduzir impactos ambientais.
+                    </p>
+
                 </div>
+
+                <!-- Imagem ilustrativa -->
                 <div class="image-box">
-                    <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=800&q=80" alt="Plantação verdejante ao pôr do sol">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=800&q=80"
+                        alt="Plantação verdejante ao pôr do sol">
+
                 </div>
+
             </div>
+
         </div>
+
     </section>
 
-<section id="pilares" class="section-padding bg-light">
+    <!--
+    =====================================================
+    SEÇÃO DOS 3 PILARES
+    =====================================================
+    Apresenta os componentes fundamentais do sistema:
+    1. Lavoura
+    2. Pecuária
+    3. Floresta
+    =====================================================
+    -->
+    <section id="pilares" class="section-padding bg-light">
+
         <div class="container text-center">
+
             <h2 class="hidden">Os Três Pilares da Integração</h2>
+
             <div class="cards-grid">
+
+                <!-- Card Lavoura -->
                 <div class="card hidden delay-1">
+
                     <img src="https://images.pexels.com/photos/2165688/pexels-photo-2165688.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Lavoura">
+
                     <h3>Lavoura</h3>
-                    <p>O cultivo de grãos (como soja e milho) recupera o solo, quebra o ciclo de pragas e gera receita rápida para o produtor.</p>
+
+                    <p>
+                        Cultivo de grãos para recuperação do solo e geração de renda.
+                    </p>
+
                 </div>
+
+                <!-- Card Pecuária -->
                 <div class="card hidden delay-2">
+
                     <img src="https://images.pexels.com/photos/162240/bull-calf-heifer-ko-162240.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Pecuária">
+
                     <h3>Pecuária</h3>
-                    <p>O gado se alimenta das pastagens de alta qualidade cultivadas após a colheita, desfrutando da sombra das árvores, o que melhora o bem-estar animal.</p>
+
+                    <p>
+                        Utilização de pastagens de qualidade e melhoria do bem-estar animal.
+                    </p>
+
                 </div>
+
+                <!-- Card Floresta -->
                 <div class="card hidden delay-3">
+
                     <img src="https://images.pexels.com/photos/167699/pexels-photo-167699.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Floresta">
+
                     <h3>Floresta</h3>
-                    <p>Árvores (como eucalipto ou espécies nativas) fornecem madeira, protegem o solo do vento e sequestram os gases de efeito estufa gerados pelo gado.</p>
+
+                    <p>
+                        Produção de madeira e sequestro de carbono.
+                    </p>
+
                 </div>
+
             </div>
+
         </div>
+
     </section>
 
+    <!--
+    =====================================================
+    SEÇÃO BENEFÍCIOS
+    =====================================================
+    Apresenta indicadores e estatísticas dos ganhos
+    proporcionados pelo sistema ILPF.
+    =====================================================
+    -->
     <section id="beneficios" class="section-padding hidden">
+
         <div class="container">
-            <h2 class="text-center">Por que o ILPF garante um Futuro Sustentável?</h2>
+
+            <h2 class="text-center">
+                Por que o ILPF garante um Futuro Sustentável?
+            </h2>
+
             <div class="stats-container">
+
+                <!-- Indicador 1 -->
                 <div class="stat-item">
-                    <h3 class="counter" data-target="100">0</h3><span>%</span>
+                    <h3 class="counter" data-target="100">0</h3>
+                    <span>%</span>
                     <p>Aproveitamento da área durante o ano todo</p>
                 </div>
+
+                <!-- Indicador 2 -->
                 <div class="stat-item">
-                    <h3 class="counter" data-target="35">0</h3><span>%</span>
+                    <h3 class="counter" data-target="35">0</h3>
+                    <span>%</span>
                     <p>Aumento médio na rentabilidade do produtor</p>
                 </div>
+
+                <!-- Indicador 3 -->
                 <div class="stat-item">
-                    <h3 class="counter" data-target="50">0</h3><span>+ Ton/ha</span>
-                    <p>De carbono sequestrado no solo e na madeira</p>
+                    <h3 class="counter" data-target="50">0</h3>
+                    <span>+ Ton/ha</span>
+                    <p>Carbono sequestrado no solo e na madeira</p>
                 </div>
+
             </div>
+
         </div>
+
     </section>
 
-    <section id="galeria" class="section-padding bg-dark text-white">
-        <div class="container text-center">
-            <h2 class="hidden">Galeria de Práticas Sustentáveis</h2>
-            <div class="gallery-grid">
-                <div class="gallery-item hidden">
-                    <img src="https://images.unsplash.com/photo-1605000797499-95a51c5269ae?auto=format&fit=crop&w=600&q=80" alt="Trator trabalhando em harmonia">
-                    <div class="overlay">Mecanização de Precisão</div>
-                </div>
-                <div class="gallery-item hidden delay-1">
-                    <img src="https://images.unsplash.com/photo-1586771107445-d3ca888129ff?auto=format&fit=crop&w=600&q=80" alt="Mãos segurando terra fértil">
-                    <div class="overlay">Recuperação do Solo</div>
-                </div>
-                <div class="gallery-item hidden delay-2">
-                    <img src="https://images.unsplash.com/photo-1464226184884-fa280b87c399?auto=format&fit=crop&w=600&q=80" alt="Cultivo verde">
-                    <div class="overlay">Alta Produtividade</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
+    <!--
+    =====================================================
+    RODAPÉ
+    =====================================================
+    Informações finais e direitos autorais.
+    =====================================================
+    -->
     <footer>
+
         <div class="container text-center">
-            <p>&copy; 2026 AgroSustentável. O Futuro é Verde. O Futuro é Agro.</p>
+
+            <p>
+                &copy; 2026 AgroSustentável.
+                O Futuro é Verde. O Futuro é Agro.
+            </p>
+
         </div>
+
     </footer>
 
+    <!-- Arquivo JavaScript responsável pelas animações -->
     <script src="script.js"></script>
+
 </body>
 </html>
